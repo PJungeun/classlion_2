@@ -1,0 +1,30 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/wordcount.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<div class="container-fluid text">
+</div>
+
+<div class="container-fluid maintext text-center" style="color: white">
+    <h1>TEXT : {{total}}</h1>
+    <br><br><br>
+    <div style="margin: 0 auto; display : block; width: 700px;">
+        <table>
+            <tr><th> TEXT </th><th> COUNT </th></tr>
+            <tr><td> {{full}} </td>
+                <td>
+                    <br><br>
+                    {% for word, howmany in dictionary %}
+                    {{howmany}}
+                    <br><br><br>
+                    {% endfor %}</td></tr>
+        </table>
+    </div>
+</div>
+
+<div class="container-fluid text">
+</div>

@@ -1,0 +1,26 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/wordcount.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<div class="container-fluid maintext text">
+</div>
+
+<div class="container text-center">
+    <h1 class="title">WORDCOUNT</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="{% url 'result' %}">
+        <textarea cols="200" rows="10" name="fulltext">ABCEDF</textarea>
+        <br>
+        <input class="button btn btn-outline-dark btn-lg" type="submit" value="CLICK">
+    </form>
+</div>
+
+<div class="container-fluid maintext text">
+</div>
